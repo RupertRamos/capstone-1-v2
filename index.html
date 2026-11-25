@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <title>Charles Babbage - Full Stack Web Developer</title>
+    <!-- Font Awesome CDN for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandSlate: '#68727d',
+              brandDarkSlate: '#212529',
+              brandMutedText: '#6c757d',
+              brandCardBorder: '#e2e8f0',
+              brandFooter: '#242a33'
+            },
+            fontFamily: {
+              serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+              sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    <!-- BEGIN: Style Configurations -->
+    <style data-purpose="typography">
+      .font-heading {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+    </style>
+    <style data-purpose="custom-utilities">
+      /* Subtle smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <!-- END: Style Configurations -->
+  </head>
+  <body class="bg-white text-gray-800 font-sans antialiased selection:bg-gray-200">
+    <!-- BEGIN: MainNavbar -->
+    <header class="bg-[#24292e] text-gray-300 sticky top-0 z-50 shadow-md">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-14">
+          <!-- Brand Logo / Name -->
+          <a class="text-xl font-heading text-white tracking-wide hover:text-gray-200 transition-colors" href="#home"> Charles </a>
+          <!-- Desktop Navigation Links -->
+          <nav class="hidden md:flex space-x-6 text-sm font-light items-center">
+            <a class="hover:text-white transition-colors" href="#home">Home</a>
+            <a class="hover:text-white transition-colors" href="#projects">Projects</a>
+            <a class="text-white font-medium hover:text-white transition-colors" href="#home">Charles</a>
+            <a class="hover:text-white transition-colors" href="#tools">Tools</a>
+            <a class="hover:text-white transition-colors" href="#contact">Contact</a>
+          </nav>
+          <!-- Mobile Hamburger Button -->
+          <button aria-label="Toggle navigation menu" class="md:hidden inline-flex items-center justify-center p-2 rounded-md border border-gray-700 text-gray-300 hover:text-white hover:border-gray-500 focus:outline-none" id="mobile-menu-button" type="button">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+          </button>
+        </div>
+        <!-- Mobile Dropdown Navigation -->
+        <nav class="hidden md:hidden pb-3 pt-1 border-t border-gray-800 space-y-1" id="mobile-menu">
+          <a class="block px-3 py-2 rounded text-sm hover:bg-gray-800 hover:text-white" href="#home">Home</a>
+          <a class="block px-3 py-2 rounded text-sm hover:bg-gray-800 hover:text-white" href="#projects">Projects</a>
+          <a class="block px-3 py-2 rounded text-sm text-white font-medium hover:bg-gray-800" href="#home">Charles</a>
+          <a class="block px-3 py-2 rounded text-sm hover:bg-gray-800 hover:text-white" href="#tools">Tools</a>
+          <a class="block px-3 py-2 rounded text-sm hover:bg-gray-800 hover:text-white" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <!-- END: MainNavbar -->
+    <main>
+      <!-- BEGIN: HeroSection -->
+      <section class="bg-[#6b757d] text-white py-12 md:py-16" id="home">
+        <div class="max-w-4xl mx-auto px-6 sm:px-8">
+          <div class="flex flex-col md:flex-row items-center md:items-center gap-8 md:gap-12">
+            <!-- Portrait Avatar Container -->
+            <div class="flex-shrink-0">
+              <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-[#505860] shadow-inner bg-gray-300 mx-auto">
+                <img alt="Portrait of Charles Babbage" class="w-full h-full object-cover filter grayscale contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXjVQwwzXv13ZKK8gPIgYPwVBBChAoNzrpYeB-uP87l5G1z8IgdfV9-jNmpm-w8Rc9qBI-Hx-yH7ILGd0uMzEDLu8SApoawxaqmzHC3bDI8aeLNWi-NxuKqzLQmE5NVeRskNhMKlatlTDYUqn6wfo2apu5vmgu17VQaaH00rpZ134vp__b0xHfzUA5r9DPGGBUkD8mZnA-8urDqwuuo0t8T4bmKICQy3PALQhkh_JE" />
+              </div>
+            </div>
+            <!-- Hero Bio Content -->
+            <div class="text-center md:text-left flex-1">
+              <h1 class="font-heading text-3xl sm:text-4xl text-white font-normal mb-1"> Charles Babbage </h1>
+              <h2 class="text-lg sm:text-xl font-normal text-gray-200 mb-4"> Full Stack Web Developer </h2>
+              <p class="text-xs sm:text-sm text-gray-200 leading-relaxed font-light"> Charles Babbage KH FRS (/ˈbæbɪdʒ/; 26 December 1791 – 18 October 1871) was an English polymath. A mathematician, philosopher, inventor and mechanical engineer, Babbage originated the concept of a digital programmable computer. Babbage is considered by some to be 'father of the computer'. </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: HeroSection -->
+      <!-- BEGIN: ProjectsSection -->
+      <section class="py-16 bg-white" id="projects">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <!-- Section Title -->
+          <h2 class="font-heading text-3xl sm:text-4xl text-center text-gray-800 mb-12"> My Projects </h2>
+          <!-- Projects Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+            <!-- Project Card 1: E Commerce -->
+            <article class="border border-gray-200 rounded shadow-sm hover:shadow-md transition-shadow flex flex-col bg-white overflow-hidden" data-purpose="project-card">
+              <!-- Project Graphic Mockup -->
+              <div class="h-60 bg-white flex items-center justify-center p-4 border-b border-gray-100 overflow-hidden">
+                <div class="w-full h-full flex items-center justify-center">
+                  <!-- Visual vector/svg graphic simulating the cart & screen -->
+                  <svg class="max-h-full max-w-full drop-shadow-sm" viewbox="0 0 320 220">
+                    <ellipse cx="230" cy="55" fill="#fca5a5" opacity="0.6" rx="42" ry="26"></ellipse>
+                    <ellipse cx="205" cy="45" fill="#fde047" opacity="0.7" rx="32" ry="20"></ellipse>
+                    <rect fill="#6366f1" height="135" rx="10" width="220" x="50" y="32"></rect>
+                    <rect fill="#818cf8" height="119" rx="6" width="204" x="58" y="40"></rect>
+                    <rect fill="#a5b4fc" height="42" opacity="0.8" rx="4" width="60" x="68" y="50"></rect>
+                    <rect fill="#a5b4fc" height="42" opacity="0.8" rx="4" width="60" x="135" y="50"></rect>
+                    <rect fill="#a5b4fc" height="42" opacity="0.8" rx="4" width="50" x="202" y="50"></rect>
+                    <rect fill="#a5b4fc" height="45" opacity="0.8" rx="4" width="60" x="68" y="100"></rect>
+                    <rect fill="#a5b4fc" height="45" opacity="0.8" rx="4" width="60" x="135" y="100"></rect>
+                    <!-- Shopper character -->
+                    <circle cx="215" cy="85" fill="#f43f5e" r="14"></circle>
+                    <path d="M 200,100 Q 220,95 235,115 L 210,165 L 195,140 Z" fill="#fbbf24"></path>
+                    <!-- Shopping Cart -->
+                    <path d="M 90,135 L 160,135 L 148,175 L 105,175 Z" fill="none" stroke="#60a5fa" stroke-width="3"></path>
+                    <circle cx="112" cy="183" fill="#475569" r="5"></circle>
+                    <circle cx="142" cy="183" fill="#475569" r="5"></circle>
+                    <rect fill="#f87171" height="26" rx="3" width="30" x="110" y="142"></rect>
+                  </svg>
+                </div>
+              </div>
+              <!-- Project Card Content -->
+              <div class="p-6 flex flex-col flex-1 text-center">
+                <h3 class="font-heading text-lg font-normal text-gray-800 mb-3">E Commerce</h3>
+                <p class="text-xs text-gray-600 leading-relaxed font-light mb-6 flex-1 text-left sm:text-center"> E-commerce, or electronic commerce, refers to the buying and selling of goods and services online through the internet. It involves transactions between businesses, individuals, or even government agencies, and is facilitated through various digital platforms such as websites, mobile apps, social media, or marketplaces. </p>
+                <footer class="text-[11px] text-gray-400 text-left pt-2 border-t border-gray-100 mt-auto"> Last updated 3 mins ago </footer>
+              </div>
+            </article>
+            <!-- Project Card 2: Blog -->
+            <article class="border border-gray-200 rounded shadow-sm hover:shadow-md transition-shadow flex flex-col bg-white overflow-hidden" data-purpose="project-card">
+              <!-- Project Graphic Mockup -->
+              <div class="h-60 bg-[#e74c3c] flex flex-col border-b border-gray-100 overflow-hidden relative">
+                <!-- Top Left Tag -->
+                <div class="bg-[#00475b] text-white text-[11px] font-bold px-4 py-1.5 self-start tracking-wider"> MLA </div>
+                <!-- Browser Mockup Window -->
+                <div class="mx-auto my-auto w-10/12 bg-white rounded-t border-2 border-gray-800 shadow-md">
+                  <div class="border-b-2 border-gray-800 py-1 px-2 flex justify-between items-center bg-gray-50">
+                    <span class="font-bold text-[10px] tracking-wide text-gray-800">BLOG</span>
+                    <span class="text-xs font-bold leading-none text-gray-800">✕</span>
+                  </div>
+                  <div class="p-3 bg-white">
+                    <div class="grid grid-cols-2 gap-2">
+                      <div class="space-y-1.5">
+                        <div class="h-1 bg-gray-700 rounded-full w-full"></div>
+                        <div class="h-1 bg-gray-700 rounded-full w-5/6"></div>
+                        <div class="h-1 bg-gray-700 rounded-full w-full"></div>
+                        <div class="h-1 bg-gray-700 rounded-full w-4/6"></div>
+                        <div class="h-1 bg-gray-700 rounded-full w-full"></div>
+                        <div class="h-1 bg-gray-700 rounded-full w-3/4"></div>
+                      </div>
+                      <div class="grid grid-cols-2 gap-1.5">
+                        <div class="bg-[#e8908d] h-8 rounded-sm"></div>
+                        <div class="bg-[#d9534f] h-8 rounded-sm"></div>
+                        <div class="bg-[#f2a7a5] h-8 rounded-sm"></div>
+                        <div class="bg-[#ef7e7a] h-8 rounded-sm"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Project Card Content -->
+              <div class="p-6 flex flex-col flex-1 text-center">
+                <h3 class="font-heading text-lg font-normal text-gray-800 mb-3">Blog</h3>
+                <p class="text-xs text-gray-600 leading-relaxed font-light mb-6 flex-1 text-left sm:text-center"> A blog (a shortened version of "weblog") is an online journal or informational website displaying information in reverse chronological order, with the latest posts appearing first, at the top. </p>
+                <footer class="text-[11px] text-gray-400 text-left pt-2 border-t border-gray-100 mt-auto"> Last updated 3 mins ago </footer>
+              </div>
+            </article>
+            <!-- Project Card 3: Online Booking System -->
+            <article class="border border-gray-200 rounded shadow-sm hover:shadow-md transition-shadow flex flex-col bg-white overflow-hidden" data-purpose="project-card">
+              <!-- Project Graphic Mockup -->
+              <div class="h-60 bg-sky-50 flex items-center justify-center border-b border-gray-100 overflow-hidden relative">
+                <div class="w-full h-full flex flex-col">
+                  <!-- Travel site banner header -->
+                  <div class="bg-[#1f80b9] text-white p-2.5 text-center shadow-inner">
+                    <div class="text-[8px] tracking-widest text-sky-200 uppercase">book cheap flights and hotels</div>
+                    <div class="text-[11px] font-bold mt-0.5">Explore Europe With Us</div>
+                  </div>
+                  <!-- Mini UI booking bar -->
+                  <div class="bg-[#f07c2a] py-1 px-3 text-[9px] text-white flex justify-around">
+                    <span>Flights</span>
+                    <span>Hotels</span>
+                    <span>Cars</span>
+                  </div>
+                  <!-- Gallery thumbnail grid -->
+                  <div class="grid grid-cols-3 gap-1 p-2 bg-gray-100 flex-1 items-center">
+                    <div class="h-16 bg-blue-200 rounded overflow-hidden relative border border-gray-300">
+                      <img alt="Paris" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbLPYQ6wIVkJwKVZCFxCHs0VrEx7JStXjpf-ilpEFVjJORakP-rRZK5kjmP7oYPN-zwCRLNXGEtRXufWNx20BGMD20s_0ibfoQ7H3jkWinlqanzsTs4wsUbHDz9qG9RZJhVQT_AhO6-brvpimIdM8bqdbegoP47jJp59jkMllH2DpP5Xf4YVuY0vMae_v-crv-Zmg1F1S-SGekUQisVd2XPyy_GW9UMnJhZIstNVu-" />
+                    </div>
+                    <div class="h-16 bg-blue-200 rounded overflow-hidden relative border border-gray-300">
+                      <img alt="Rome" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAle_fJR6tA_d789LbhborWgPsAMtn5r4qR0f0clxg2lkKfZlIl0GSkq_B5FETH8-30C_j-Lk_5XnDn8A_ogcETSw_v0WOAg_wZ6l9IWHoz-yKmtyucyqaO75oQaPd8B1T50GefwUIHSL1_i7nrfVx9GeUFhOrDfA0uLJXYs1x1yGmMmF4opzYII6un5Hmxw_iLqUAdxHHXZ8lj5LMa6BbZlPYjimu4dpxZrPm2Eb4z" />
+                    </div>
+                    <div class="h-16 bg-blue-200 rounded overflow-hidden relative border border-gray-300">
+                      <img alt="London" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0O_xqMOH-hDILMtLAgz5Cdq2WbMAp-2htv6T6pwc-gnKnDboN6aQOofocIijW5hg9R6PaO8Z_DQVFSwxULU8CvwHlettuu_Jzw1W6yXM2aoZ7aWWJO3srnlxjl18ZsLk4bbM-3J4GLGACEy72QR_LuMYrMZdF5O2xSj_OmeXB_vXejf259BhcOUYOxVbMUnwovPxgH9z26CD4JETM-zsNFowwW2M6olymP4IKaU37" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Project Card Content -->
+              <div class="p-6 flex flex-col flex-1 text-center">
+                <h3 class="font-heading text-lg font-normal text-gray-800 mb-3">Online Booking System</h3>
+                <p class="text-xs text-gray-600 leading-relaxed font-light mb-6 flex-1 text-left sm:text-center"> What is an online booking system? Put simply, an online booking system is a software solution used for reservation management. </p>
+                <footer class="text-[11px] text-gray-400 text-left pt-2 border-t border-gray-100 mt-auto"> Last updated 3 mins ago </footer>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- END: ProjectsSection -->
+      <!-- BEGIN: ToolsSection -->
+      <section class="py-16 bg-[#6b757d] text-white" id="tools">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+          <!-- Section Heading -->
+          <h2 class="font-heading text-3xl sm:text-4xl text-white mb-12"> Tools </h2>
+          <!-- Tools Columns Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+            <!-- Category 1: Front End -->
+            <div class="flex flex-col items-center">
+              <h3 class="font-heading text-xl text-gray-100 mb-6 font-normal"> Front End </h3>
+              <div class="grid grid-cols-2 gap-5 w-44">
+                <!-- HTML5 -->
+                <div class="w-16 h-16 mx-auto flex items-center justify-center" title="HTML5">
+                  <i class="fab fa-html5 text-5xl text-[#e34f26]"></i>
+                </div>
+                <!-- CSS3 -->
+                <div class="w-16 h-16 mx-auto flex items-center justify-center" title="CSS3">
+                  <i class="fab fa-css3-alt text-5xl text-[#1572b6]"></i>
+                </div>
+                <!-- Bootstrap -->
+                <div class="w-16 h-16 mx-auto flex items-center justify-center" title="Bootstrap">
+                  <i class="fab fa-bootstrap text-5xl text-[#7952b3]"></i>
+                </div>
+                <!-- JavaScript -->
+                <div class="w-16 h-16 mx-auto flex items-center justify-center" title="JavaScript">
+                  <i class="fab fa-js-square text-5xl text-[#f7df1e]"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Category 2: MERN -->
+            <div class="flex flex-col items-center">
+              <h3 class="font-heading text-xl text-gray-100 mb-6 font-normal"> MERN </h3>
+              <div class="grid grid-cols-2 gap-5 w-44">
+                <!-- MongoDB -->
+                <div class="w-16 h-16 mx-auto flex items-center justify-center" title="MongoDB">
+                  <i class="fas fa-leaf text-4xl text-[#47a248] bg-white rounded-full p-2 border"></i>
+                </div>
+                <!-- Express -->
+                <div class="w-16 h-16 mx-auto flex items-center justify-center" title="Express.js">
+                  <div class="w-12 h-12 rounded-full bg-[#353535] text-white flex items-center justify-center font-bold text-base tracking-tighter border border-gray-400"> ex </div>
+                </div>
+                <!-- React -->
+                <div class="w-16 h-16 mx-auto flex items-center justify-center" title="React">
+                  <i class="fab fa-react text-5xl text-[#61dafb]"></i>
+                </div>
+                <!-- Node.js -->
+                <div class="w-16 h-16 mx-auto flex items-center justify-center" title="Node.js">
+                  <i class="fab fa-node text-5xl text-[#339933]"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Category 3: Other Tools -->
+            <div class="flex flex-col items-center">
+              <h3 class="font-heading text-xl text-gray-100 mb-6 font-normal"> Other Tools </h3>
+              <div class="grid grid-cols-2 gap-5 w-44">
+                <!-- Heroku -->
+                <div class="w-16 h-16 mx-auto flex items-center justify-center" title="Heroku">
+                  <div class="w-12 h-12 bg-[#6762a6] rounded-md flex items-center justify-center text-white font-bold text-2xl"> h </div>
+                </div>
+                <!-- Git -->
+                <div class="w-16 h-16 mx-auto flex items-center justify-center" title="Git">
+                  <i class="fab fa-git-alt text-5xl text-[#f05032]"></i>
+                </div>
+                <!-- Postman -->
+                <div class="w-16 h-16 mx-auto flex items-center justify-center" title="Postman">
+                  <div class="w-12 h-12 rounded-full bg-[#ff6c37] flex items-center justify-center text-white text-xl">
+                    <i class="fas fa-rocket"></i>
+                  </div>
+                </div>
+                <!-- Sublime / Text Editor -->
+                <div class="w-16 h-16 mx-auto flex items-center justify-center" title="Sublime Text">
+                  <div class="w-12 h-12 bg-[#333333] rounded-md flex flex-col justify-center items-center p-2 gap-1">
+                    <div class="w-full h-1.5 bg-[#ff9800] rounded-sm"></div>
+                    <div class="w-full h-1.5 bg-[#ff9800] rounded-sm transform translate-x-1"></div>
+                    <div class="w-full h-1.5 bg-[#ff9800] rounded-sm"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: ToolsSection -->
+      <!-- BEGIN: ContactSection -->
+      <section class="py-16 bg-white" id="contact">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+          <!-- Section Title -->
+          <h2 class="font-heading text-3xl sm:text-4xl text-center text-gray-800 mb-8"> Contact </h2>
+          <!-- Social Media Icons Row -->
+          <div class="flex justify-center items-center space-x-8 mb-14 text-2xl text-gray-800">
+            <a aria-label="Facebook Profile" class="hover:text-blue-600 transition-colors" href="#">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a aria-label="LinkedIn Profile" class="hover:text-blue-700 transition-colors" href="#">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a aria-label="GitLab Profile" class="hover:text-orange-600 transition-colors" href="#">
+              <i class="fab fa-gitlab"></i>
+            </a>
+            <a aria-label="GitHub Profile" class="hover:text-black transition-colors" href="#">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <!-- Contact Two-Column / Stacked Layout -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+            <!-- Column 1: Visit Us (Map Card) -->
+            <div data-purpose="location-map-container">
+              <h3 class="font-heading text-2xl text-center md:text-left text-gray-800 mb-4 font-normal"> Visit Us </h3>
+              <!-- Map Card Representation -->
+              <div class="border border-gray-300 rounded overflow-hidden shadow-sm relative h-80 bg-slate-100">
+                <!-- Real embedded interactive OpenStreetMap to mimic Google Map perfectly -->
+                <iframe class="w-full h-full border-0" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=120.985%2C14.595%2C121.002%2C14.605&amp;layer=mapnik&amp;marker=14.5995%2C120.9935" title="Centro Escolar University Map"></iframe>
+                <!-- Floating Map Info Badge (Mocking Google Maps UI) -->
+                <div class="absolute top-3 left-3 bg-white/95 backdrop-blur-sm p-3 rounded shadow-md border border-gray-200 max-w-[240px] text-xs pointer-events-auto">
+                  <p class="font-bold text-gray-900 leading-snug">Centro Escolar University</p>
+                  <p class="text-[11px] text-gray-600 mt-0.5 leading-tight">9 Mendiola St, San Miguel, Manila, 1008 Metro Manila, Philippines</p>
+                  <div class="flex items-center space-x-1 mt-1 text-[11px] text-amber-600">
+                    <span>4.3</span>
+                    <span>★★★★☆</span>
+                    <span class="text-gray-500">(289)</span>
+                  </div>
+                  <a class="mt-2 inline-flex items-center space-x-1 text-white bg-blue-600 hover:bg-blue-700 px-2.5 py-1 rounded text-[11px] font-medium" href="https://maps.google.com/?q=Centro+Escolar+University+Manila" rel="noopener noreferrer" target="_blank">
+                    <i class="fas fa-external-link-alt text-[9px]"></i>
+                    <span>Open in Maps</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Column 2: Message Us (Form) -->
+            <div data-purpose="contact-form-container">
+              <h3 class="font-heading text-2xl text-center md:text-left text-gray-800 mb-4 font-normal"> Message Us </h3>
+              <form action="#" class="space-y-4" method="POST" onsubmit="event.preventDefault();">
+                <!-- Full Name Field -->
+                <div>
+                  <label class="block text-xs font-normal text-gray-600 mb-1" for="fullName"> Full Name </label>
+                  <input class="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-gray-400 focus:border-gray-400 outline-none" id="fullName" name="fullName" type="text" />
+                </div>
+                <!-- Email Address Field -->
+                <div>
+                  <label class="block text-xs font-normal text-gray-600 mb-1" for="emailAddress"> Email Address </label>
+                  <input class="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-gray-400 focus:border-gray-400 outline-none" id="emailAddress" name="emailAddress" type="email" />
+                </div>
+                <!-- Message Field -->
+                <div>
+                  <label class="block text-xs font-normal text-gray-600 mb-1" for="message"> Message </label>
+                  <textarea class="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:ring-1 focus:ring-gray-400 focus:border-gray-400 outline-none resize-y" id="message" name="message" rows="4"></textarea>
+                </div>
+                <!-- Submit Button -->
+                <div>
+                  <button class="w-full py-2 px-4 border border-gray-400 rounded text-sm text-gray-700 bg-white hover:bg-gray-50 focus:outline-none transition-colors" type="submit"> Send </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: ContactSection -->
+    </main>
+    <!-- BEGIN: Footer -->
+    <footer class="bg-[#212529] text-gray-400 text-center py-6 border-t border-gray-800 text-xs sm:text-sm">
+      <div class="max-w-4xl mx-auto px-4 space-y-1">
+        <p class="text-white font-medium">Charles Babbage</p>
+        <p>Full Stack Web Developer</p>
+        <p>© All Rights Reserved 2021</p>
+      </div>
+    </footer>
+    <!-- END: Footer -->
+    <!-- BEGIN: ScriptHandlers -->
+    <script data-purpose="mobile-navigation">
+      // Toggle mobile navigation menu visibility
+      const mobileButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileButton && mobileMenu) {
+        mobileButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+        // Close mobile menu on clicking any navigation link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+          });
+        });
+      }
+    </script>
+    <!-- END: ScriptHandlers -->
+  </body>
+</html>
